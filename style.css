@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.container {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+.mainHeading
+{
+    margin: 1rem;
+}
+.img1{
+    background-image: url('./src/water-3271579_640.jpg');
+}
+.img2{
+    background-image: url('./src/pexels-photo-3225517.jpeg');
+}
+.img3{
+    background-image: url('./src/mystery-1599527_1280.jpg');
+}
+.img4{
+    background-image: url('./src/hot-air-balloons-1807521_640.jpg');
+}
+.img5{
+    background-image: url('./src/astronaut-4106766_640.jpg');
+}
+.imgs {
+  background-size: auto 100%;
+  background-position: center;
+  
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  margin: 10px;
+  flex: 2;
+  position: relative;
+  transition: flex 0.8s ease-in;
+  /* object-fit: cover; */
+}
+.imgs h3 {
+  position: absolute;
+  bottom: 1rem;
+  color: white;
+  left: 2rem;
+  opacity: 0;
+}
+.imgs.active h3 {
+  opacity: 1;
+  transition: opacity 0.8s ease-in 0.4s;
+}
+.imgs.active {
+  flex: 4;
+}
+
+@media (max-width: 576px) {
+  .imgs {
+    flex: 1;
+  }
+  .imgs.active {
+    flex: 3;
+  }
+  .container{
+    width: 100vw;
+    height: 50vh;
+  }
+  .imgs:nth-of-type(4),
+  .imgs:nth-of-type(5) {
+    display: none;
+  }
+}
